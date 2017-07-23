@@ -52,6 +52,11 @@ var previousSong = function() {
     $lastSongNumberCell.html(lastSongNumber);
 };
 
+var setSong = function (songNumber) {
+  currentlyPlayingSongNumber = parseInt(songNumber);
+  currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
+}
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
        '<tr class="album-view-song-item">'
